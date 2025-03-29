@@ -1,14 +1,19 @@
 <template>
   <div class="container">
-    <SideNav />
+
     <div class="main-content">
       <router-view></router-view>
+    </div>
+    <div class="nav-drawer" :class="{ open: isOpen }">
+
+      <SideNav />
+
     </div>
   </div>
 </template>
 
 <script>
-import SideNav from "@/examples/SideNav";
+import SideNav from "@/collections/SideNav.vue";
 // import {FocusableGrid} from '../../dist/vue-spatial-navigation.esm'
 export default {
   name: "App",
@@ -43,5 +48,26 @@ body {
   flex-direction: column;
   padding: 100px;
   overflow: hidden;
+}
+ .nav-drawer {
+   position: fixed;
+   right: 0;
+   width: 200px;
+   height: 100vh;
+   background: #222;
+   color: white;
+   padding: 20px;
+   transition: transform 0.3s ease-in-out;
+ }
+
+.menu-item {
+  padding: 10px;
+  text-align: right; /* ???????? ???? ??? */
+}
+
+.menu-item.selected,
+.menu-item:focus {
+  background: yellow;
+  color: black;
 }
 </style>

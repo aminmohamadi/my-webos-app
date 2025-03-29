@@ -1,27 +1,41 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ListExample from "@//collections/ListExample";
+import ListDisabledExample from "@/collections/ListDisabledExample";
+import CarouselExample from "@/collections/CarouselExample";
+import NestedCarouselExample from "@/collections/NestedCarouselExample";
+import GridExample from "@/collections/GridExample";
 
-const routes = [
+
+export const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/list",
+    displayName: "List",
+    component: ListExample,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-    }
-  }
-]
+    path: "/listdisabled",
+    displayName: "List with disabled items",
+    component: ListDisabledExample,
+  },
+  {
+    path: "/carousel",
+    displayName: "Carousel",
+    component: CarouselExample,
+  },
+  {
+    path: "/nestedcarousel",
+    displayName: "Nested Carousel",
+    component: NestedCarouselExample,
+  },
+  {
+    path: "/grid",
+    displayName: "Grid",
+    component: GridExample,
+  },
 
+];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
-
 export default router

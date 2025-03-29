@@ -1,18 +1,14 @@
 <template>
-  <Nav
-      :child="Card"
-      :isFocused="true"
-      :items="items"
-      :shouldScroll="true"
-      :maxColumn="4"
-  />
+  <div v-for="(item, index) in items">
+  <RouterLink :to="item.path">{{item.displayName}}</RouterLink>
+  </div>
 </template>
 
 <script>
-import { routes } from "@/examples/router";
+import { routes } from "@/router";
 import {Nav} from "@/focusable";
-import NavItem from "@/examples/components/Nav.vue"
-import Card from "@/examples/components/Card.vue";
+import NavItem from "@/components/Nav.vue"
+import Card from "@/components/Card.vue";
 export default {
   components : {
    Nav

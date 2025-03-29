@@ -4,14 +4,14 @@
     :isFocused="true"
     :items="items"
     :shouldScroll="shouldScroll"
-    :disabledIndex="disabledIndex"
+    v-on:onFocusChange="onFocusHandler"
   />
 </template>
 
 <script>
 import List from "@/focusable/List";
-import Button from "@/examples/components/Button";
-import { ListData } from "../mock/mock";
+import Button from "@/components/Button";
+import { ListData } from "@/mock/mock";
 export default {
   props: ["shouldScroll"],
   components: {
@@ -21,8 +21,12 @@ export default {
     return {
       items: ListData,
       Button: Button,
-      disabledIndex: [1, 3],
     };
+  },
+  methods: {
+    onFocusHandler(data) {
+      console.error(data);
+    },
   },
 };
 </script>

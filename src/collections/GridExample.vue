@@ -10,8 +10,8 @@
 
 <script>
 import Grid from "@/focusable/Grid";
-import Card from "@/examples/components/Card";
-import { gridData } from "../mock/mock";
+import Card from "@/components/Card";
+import { gridData } from "@/mock/mock";
 export default {
   props: ["shouldScroll"],
   components: {

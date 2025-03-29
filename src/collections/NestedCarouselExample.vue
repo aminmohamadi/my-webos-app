@@ -10,8 +10,8 @@
 
 <script>
 import List from "@/focusable/List";
-import Card from "@/examples/components/Card";
-import { carouselData } from "../mock/mock";
+import Card from "@/components/Card";
+import { carouselData } from "@/mock/mock";
 export default {
   components: {
     List,
