@@ -1,0 +1,17 @@
+{
+  "id": "com.yourcompany.mywebosapp",
+  "version": "1.0.0",
+  "vendor": "Your Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "My WebOS IPTV App",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "bgColor": "#000000",
+  "requiredMemory": 128,
+  "permissions": [],
+  "uiRevision": 2,
+  "trustLevel": "developer",
+  "appDescription": "An IPTV and VOD streaming app for LG Smart TVs.",
+  "resolution": "1920x1080"
+}
