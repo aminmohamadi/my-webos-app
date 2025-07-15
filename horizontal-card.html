@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Card Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 p-8">
+    <!-- Card Component -->
+    <div dir="rtl" class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+        <div class="flex flex-row-reverse">
+            <!-- Text Content Section (2/3 width) -->
+            <div class="w-2/3 p-8 flex flex-col justify-center">
+                <!-- Product Title -->
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-right">
+                    Airpods Max
+                </h2>
+                
+                <!-- Product Description -->
+                <p class="text-gray-600 dark:text-gray-300 mb-6 text-right leading-relaxed">
+                    سماعات أبل الجديدة بجودة صوت استثنائية وتقنية إلغاء الضوضاء المتقدمة. تصميم مريح وأنيق يناسب جميع الأوقات مع بطارية تدوم طوال اليوم.
+                </p>
+                
+                <!-- Buttons Container -->
+                <div class="flex gap-4 justify-end">
+                    <!-- Add to Cart Button (Gray) -->
+                    <button class="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200">
+                        أضف للسلة
+                    </button>
+                    
+                    <!-- Buy Now Button (Purple with hover) -->
+                    <button class="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+                        اشتري الآن
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Image Section (1/3 width) -->
+            <div class="w-1/3">
+                <img 
+                    src="https://images.unsplash.com/photo-1625894928095-8b4c5565a2b5?w=400&h=400&fit=crop&crop=center" 
+                    alt="Airpods Max" 
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle (for demonstration) -->
+    <div class="max-w-4xl mx-auto mt-8 text-center">
+        <button 
+            onclick="document.documentElement.classList.toggle('dark')"
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        >
+            Toggle Dark Mode
+        </button>
+    </div>
+</body>
+</html>
